@@ -19,6 +19,9 @@ public class User {
 	@OneToMany
 	private List<Product> products;
 
+    public User() {
+    }
+	
 	public User(Long id, String firstname,String lastname, List<Product> products) {
 		this.id = id;
 		this.firstname = firstname;

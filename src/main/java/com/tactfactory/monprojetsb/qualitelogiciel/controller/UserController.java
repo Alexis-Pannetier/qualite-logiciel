@@ -17,11 +17,11 @@ import com.tactfactory.monprojetsb.qualitelogiciel.repositories.UserRepository;
 @RequestMapping(value = "/user")
 public class UserController {
 
-	@Autowired
-	private UserRepository repository;
-	private ProductRepository productRepo;
-	
-	public UserController(UserRepository userRepository, ProductRepository productRepository) {
+    @Autowired
+    private UserRepository repository;
+    private ProductRepository productRepo;
+
+    public UserController(UserRepository userRepository, ProductRepository productRepository) {
         this.repository = userRepository;
         this.productRepo = productRepository;
     }
@@ -61,5 +61,4 @@ public class UserController {
         model.addAttribute("items", repository.getOne(Long.parseLong(id)).getProducts());
         return "user/detail";
     }
-
 }

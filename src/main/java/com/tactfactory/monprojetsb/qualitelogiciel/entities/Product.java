@@ -13,6 +13,9 @@ public class Product {
 	private String name;
 	private Float price;
 	
+    public Product() {
+    }
+	
 	public Product(Long id, String name, Float price) {
 		this.id = id;
 		this.name = name;
