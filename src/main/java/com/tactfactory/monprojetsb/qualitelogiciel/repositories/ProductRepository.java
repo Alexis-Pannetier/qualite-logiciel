@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 import com.tactfactory.monprojetsb.qualitelogiciel.entities.Product;
 
 @Repository
-public interface ProductRepository extends JpaRepository<Product,Long>{
+public interface ProductRepository extends JpaRepository<Product, Long> {
+
+	Product getProductById(Long p1);
 
 }

@@ -54,7 +54,7 @@ public class ProductController {
     @GetMapping(value = {"/show/{id}"})
     public String details(Model model, @PathVariable(value = "id") String id) {
         model.addAttribute("product", repository.getOne(Long.parseLong(id)));
-        return "product/detail";
-    }
+		return "product/detail";
+	}
 
 }

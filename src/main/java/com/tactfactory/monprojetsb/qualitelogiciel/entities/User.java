@@ -14,21 +14,21 @@ public class User {
 	@GeneratedValue
 	private Long id;
 	private String firstname;
-	private String lastname;	
-	
+	private String lastname;
+
 	@OneToMany
 	private List<Product> products;
 
-    public User() {
-    }
-	
-	public User(Long id, String firstname,String lastname, List<Product> products) {
+	public User() {
+	}
+
+	public User(Long id, String firstname, String lastname, List<Product> products) {
 		this.id = id;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.products = products;
 	}
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -60,5 +60,5 @@ public class User {
 	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
-	
+
 }
